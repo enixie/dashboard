@@ -5,20 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- Montserrat Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
 </head>
 <body>
     <div class="grid-container">
 
         <!-- Header -->
-         <header class="header"></header>
+         <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div> <!-- Menu Icon -->
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
         <!-- End Header -->
 
         <!-- Sidebar -->
-        <aside id="sidebar"></aside>
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand"></div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div> <!-- Sidebar Title-->
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">photo_size_select_actual</span> Dashboard
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">filter_list</span> Triagem
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">build</span> Abertura
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">analytics</span> Análise
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">build_circle</span> Montagem
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">water_drop</span> Estanque
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">monitor_heart</span> Runin
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">bolt</span> Laser
+                </li>
+            </ul>
+        </aside>
         <!-- End Sidebar -->
 
         <!-- Main -->
-         <main class="main-container"></main>
+         <main class="main-container">
+            <div class="main-title">
+                <h2>DASHBOARD</h2>
+            </div>
+
+            <div class="main-cards">
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>TRIAGEM</h3>
+                        <span class="material-icons-outlined">filter_list</span>
+                    </div>
+                    <h1>249</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>ABERTURA</h3>
+                        <span class="material-icons-outlined">build</span>
+                    </div>
+                    <h1>523</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>ANÁLISE</h3>
+                        <span class="material-icons-outlined">analytics</span>
+                    </div>
+                    <h1>358</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>MONTAGEM</h3>
+                        <span class="material-icons-outlined">build_circle</span>
+                    </div>
+                    <h1>447</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>ESTANQUE</h3>
+                        <span class="material-icons-outlined">water_drop</span>
+                    </div>
+                    <h1>695</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>RUNIN</h3>
+                        <span class="material-icons-outlined">monitor_heart</span>
+                    </div>
+                    <h1>600</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>LASER</h3>
+                        <span class="material-icons-outlined">bolt</span>
+                    </div>
+                    <h1>254</h1>
+                </div>
+            </div> <!-- End Main Cards -->
+         </main>
         <!-- End Main -->
     </div>
 
