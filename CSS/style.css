@@ -43,7 +43,7 @@ body {
     height: 100%;
     background-color: #263043;
     overflow-y: auto;
-    transition: all 0,5s;
+    transition: all 0.5s;
     -webkit-transition: all 0.5s;
 }
 
@@ -107,6 +107,9 @@ body {
     margin: 20px 0;
 }
 
+
+/* --------------- CARDS --------------- */
+
 .card {
     display: flex;
     flex-direction: column;
@@ -116,33 +119,63 @@ body {
 }
 
 .card:first-child {
-    background-color: #2cda16;
+    background-color: #ff0000; /* Triagem */
 }
 
 .card:nth-last-child(1) {
-    background-color: #b01482;
+    background-color: #006400; /* Demanda */
 }
 
 .card:nth-last-child(2) {
-    background-color: #ff6d00;
+    background-color: #32CD32; /* Laser */
 }
 
 .card:nth-last-child(3) {
-    background-color: #238aac;
+    background-color: #FFD700; /* Estanque */
 }
 
 .card:nth-last-child(4) {
-    background-color: #2962ff;
+    background-color: #FFA500; /* Montagem */
 }
 
 .card:nth-last-child(5) {
-    background-color: #d50000;
+    background-color: #ff7700; /* Análise */
 }
 
 .card:nth-last-child(6) {
-    background-color: #62297e;
+    background-color: #FF4500; /* Abertura */
 }
 
 .card-inner > .material-icons-outlined {
     font-size: 45px;
+}
+
+/* --------------- CHARTS --------------- */
+
+.charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.charts-card {
+    background-color: #263043;
+    margin-bottom: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+}
+
+.chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bar-chart, #area-chart {
+    width: 100%;
+    height: 350px;
 }

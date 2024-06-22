@@ -61,10 +61,10 @@
                     <span class="material-icons-outlined">water_drop</span> Estanque
                 </li>
                 <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">monitor_heart</span> Runin
+                    <span class="material-icons-outlined">monitor_heart</span> Laser
                 </li>
                 <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">bolt</span> Laser
+                    <span class="material-icons-outlined">bolt</span> Demanda
                 </li>
             </ul>
         </aside>
@@ -120,7 +120,7 @@
 
                 <div class="card">
                     <div class="card-inner">
-                        <h3>RUNIN</h3>
+                        <h3>LASER</h3>
                         <span class="material-icons-outlined">monitor_heart</span>
                     </div>
                     <h1>600</h1>
@@ -128,15 +128,32 @@
 
                 <div class="card">
                     <div class="card-inner">
-                        <h3>LASER</h3>
+                        <h3>DEMANDA</h3>
                         <span class="material-icons-outlined">bolt</span>
                     </div>
                     <h1>254</h1>
                 </div>
             </div> <!-- End Main Cards -->
+
+            <div class="charts">
+                <div class="charts-card">
+                    <h2 class="chart-title">Prioridade</h2>
+                    <div id="bar-chart"></div>
+                </div>
+
+                <div class="charts-card">
+                    <h2 class="chart-title">Definir</h2> <!-- ainda preciso definir o que aparecerá -->
+                    <div id="area-chart"></div>
+                </div>
+
+            </div> <!-- End Charts -->
+
          </main>
         <!-- End Main -->
     </div>
+
+    <!-- Apexcharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.49.1/apexcharts.min.js"></script>
 
     <script src="JS/script.js"></script>
 </body>
