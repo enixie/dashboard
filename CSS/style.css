@@ -18,7 +18,7 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-columns: 250px 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 3fr;
     grid-template-areas:
         "sidebar header header header"
@@ -146,6 +146,12 @@ body {
     background-color: #FF4500; /* Abertura */
 }
 
+.card-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .card-inner > .material-icons-outlined {
     font-size: 45px;
 }
@@ -175,7 +181,49 @@ body {
     justify-content: center;
 }
 
-#bar-chart, #area-chart {
-    width: 100%;
-    height: 350px;
+/* --------------- MEDIA QUERIES --------------- */
+
+/* Medio <= 992px */
+@media screen and (max-width: 992px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 3fr;
+        grid-template-areas: 
+            "header"
+            "main";
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline;
+    }
+
+    .sidebar-title > span {
+        display: inline;
+    }
 }
+
+/* Pequeno <= 768px */
+@media screen and (max-width: 768px) {
+    .main-cards {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 0;
+    }
+
+    .charts {
+        grid-template-columns: 1fr;
+        margin-top: 30px;
+    }
+}
+
+/* Muito Pequeno <= 576px */
+@media screen and (max-width: 576px) {
+    .header-left{
+        display: none;
+    }
+}
+
