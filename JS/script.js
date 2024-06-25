@@ -166,7 +166,7 @@ var areaChartOptions = {
             show: false,
         },
     },
-    colors: ["#00ab57", "#d50000"],
+    colors: ["#00ab57", "#775DD0"],
     labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "De"],
     dataLabels: {
         enabled: false,

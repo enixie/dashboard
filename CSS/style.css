@@ -119,31 +119,31 @@ body {
 }
 
 .card:first-child {
-    background-color: #ff0000; /* Triagem */
+    background-color: #d70000; /* Triagem */
 }
 
 .card:nth-last-child(1) {
-    background-color: #006400; /* Demanda */
+    background-color: #00008B; /* Demanda */
 }
 
 .card:nth-last-child(2) {
-    background-color: #32CD32; /* Laser */
+    background-color: #5f8fea; /* Laser */
 }
 
 .card:nth-last-child(3) {
-    background-color: #FFD700; /* Estanque */
+    background-color: #009500; /* Estanque */
 }
 
 .card:nth-last-child(4) {
-    background-color: #FFA500; /* Montagem */
+    background-color: #4eff18; /* Montagem */
 }
 
 .card:nth-last-child(5) {
-    background-color: #ff7700; /* Análise */
+    background-color: #d9d900; /* Análise */
 }
 
 .card:nth-last-child(6) {
-    background-color: #FF4500; /* Abertura */
+    background-color: #FFA500; /* Abertura */
 }
 
 .card-inner {
