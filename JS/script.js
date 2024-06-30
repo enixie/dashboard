@@ -263,3 +263,71 @@ var areaChartOptions = {
 
 var areachart = new ApexCharts(document.querySelector("#area-chart"), areaChartOptions);
 areachart.render();
+
+
+// GAUGE-CHART TRIAGEM
+// Valor alvo
+const targetValue = 528;
+// Progresso atual
+let currentProgress = 0;
+
+// Configurações do gráfico
+var options = {
+    chart: {
+        height: 350,
+        type: 'radialBar',
+    },
+    series: [0],
+    labels: ['Progresso'],
+    plotOptions: {
+        radialBar: {
+            dataLabels: {
+                value: {
+                    color: '#FFFFFF',
+                    formatter: function(val) {
+                        return parseFloat(val).toFixed(1) + "%";
+                    }
+                }
+            },
+            track: {
+                background: '#FFFFFF'
+            }
+        }
+    }
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+// Função para submeter a produção
+function submitProduction(event) {
+    if (event) event.preventDefault();
+    
+    const inputValue = parseInt(document.getElementById('production-quantity').value);
+    if (isNaN(inputValue) || inputValue < 0) {
+        alert("Por favor, insira um número válido.");
+        return;
+    }
+
+    currentProgress += inputValue;
+
+    // Calcula a porcentagem
+    const percentage = (currentProgress / targetValue) * 100;
+
+    // Atualiza o gráfico
+    chart.updateSeries([percentage.toFixed(1)]);
+
+    // Limpa o campo de input
+    document.getElementById('production-quantity').value = '';
+}
+
+// Adiciona ouvinte de eventos para a tecla Enter
+document.getElementById('production-quantity').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        submitProduction(event);
+    }
+});
+
+// TRIAGEM
+
+

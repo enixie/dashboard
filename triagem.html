@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Triagem</title>
     <link rel="stylesheet" href="CSS/style.css">
 
     <!-- Montserrat Font -->
@@ -43,7 +43,7 @@
 
             <ul class="sidebar-list">
                 <li class="sidebar-list-item">
-                    <span class="material-icons-outlined">photo_size_select_actual</span> Dashboard
+                    <span class="material-icons-outlined">photo_size_select_actual</span><a href="index.html"> Dashboard</a>
                 </li>
                 <li class="sidebar-list-item">
                     <span class="material-icons-outlined">filter_list</span><a href="triagem.html"> Triagem</a>
@@ -67,93 +67,39 @@
                     <span class="material-icons-outlined">monitor_heart</span> Demanda
                 </li>
             </ul>
-        </aside>
-        <!-- End Sidebar -->
+        </aside> <!-- End Sidebar -->
 
         <!-- Main -->
-         <main class="main-container">
+        <main class="main-container">
             <div class="main-title">
-                <h2>DASHBOARD</h2>
+                <h2>TRIAGEM</h2>
+            </div>
+    
+            <div class="input-container">
+                <label for="production-quantity">Número produzido: &nbsp;</label>
+                <input type="number" id="production-quantity" name="production-quantity" min="0" step="1" required>
+                <button onclick="submitProduction()">Enviar</button>
             </div>
 
-            <div class="main-cards">
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>TRIAGEM</h3>
-                        <span class="material-icons-outlined">filter_list</span>
+            <div class="page-charts">
+                <div class="page-charts-card">
+                    <div class="chart-title">
+                        <h3>PRODUÇÃO</h3>
                     </div>
-                    <h1>249</h1>
-                </div>
+                    <div id="chart">
 
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>ABERTURA</h3>
-                        <span class="material-icons-outlined">build</span>
                     </div>
-                    <h1>523</h1>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>ANÁLISE</h3>
-                        <span class="material-icons-outlined">analytics</span>
+                    <div class="chart-number">
+                        Produção: 528
                     </div>
-                    <h1>358</h1>
                 </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>MONTAGEM</h3>
-                        <span class="material-icons-outlined">build_circle</span>
-                    </div>
-                    <h1>447</h1>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>ESTANQUE</h3>
-                        <span class="material-icons-outlined">water_drop</span>
-                    </div>
-                    <h1>695</h1>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>LASER</h3>
-                        <span class="material-icons-outlined">bolt</span>
-                    </div>
-                    <h1>600</h1>
-                </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h3>DEMANDA</h3>
-                        <span class="material-icons-outlined">monitor_heart</span>
-                    </div>
-                    <h1>254</h1>
-                </div>
-            </div> <!-- End Main Cards -->
-
-            <div class="dashboard-charts">
-                <div class="dashboard-charts-card">
-                    <h2 class="chart-title">Prioridade</h2>
-                    <div id="bar-chart"></div>
-                </div>
-
-                <div class="dashboard-charts-card">
-                    <h2 class="chart-title">Progresso</h2>
-                    <div id="area-chart"></div>
-                </div>                
-
-            </div> <!-- End Charts -->
-
-         </main> <!-- End Main -->
+            </div>
+        </main> 
     </div>
 
     <!-- Apexcharts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.49.1/apexcharts.min.js"></script>
 
-    <script src="JS/script.js"></script>
-</body>
+    <script src="./JS/script.js"></script>
+    </body>
 </html>
